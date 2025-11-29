@@ -25,10 +25,6 @@ bool WindowManager::Initialize()
 	return true;
 }
 
-void WindowManager::Update()
-{
-	
-}
 
 void WindowManager::ShutDown()
 {

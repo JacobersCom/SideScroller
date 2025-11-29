@@ -8,11 +8,10 @@ public:
 
 	WindowManager();
 	bool Initialize();
-	void Update();
 	void ShutDown();
 
 
-private:
+protected:
 	SDL_Window* window;
 	bool isRunning;
 };
