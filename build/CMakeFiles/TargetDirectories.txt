@@ -1,0 +1,4 @@
+D:/dev/sidescroller/build/CMakeFiles/ALL_BUILD.dir
+D:/dev/sidescroller/build/CMakeFiles/ZERO_CHECK.dir
+D:/dev/sidescroller/build/project/CMakeFiles/project.dir
+D:/dev/sidescroller/build/game/CMakeFiles/sidescroller.dir
