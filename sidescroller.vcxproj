@@ -136,11 +136,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
-    <Text Include="game\CMakeLists.txt" />
     <Text Include="project\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game\main.cpp" />
+    <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\WindowManager.cpp" />
     <ClCompile Include="project\includes\WindowManager.h" />
   </ItemGroup>

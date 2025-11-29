@@ -21,18 +21,15 @@
     <Text Include="project\CMakeLists.txt">
       <Filter>Source Files</Filter>
     </Text>
-    <Text Include="game\CMakeLists.txt">
-      <Filter>Source Files</Filter>
-    </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="project\includes\WindowManager.h">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="project\includes\WindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="project\includes\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
