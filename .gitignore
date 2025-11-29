@@ -361,3 +361,18 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.dll
+/build/ZERO_CHECK.vcxproj
+*.filters
+*.vcxproj
+/build/sidescroller.sln
+/build/cmake_install.cmake
+/build/CMakeCache.txt
+/build/ALL_BUILD.vcxproj
+/build/project/project.vcxproj.filters
+/build/project/project.vcxproj
+/build/CMakeFiles/TargetDirectories.txt
+/build/CMakeFiles/InstallScripts.json
+/build/CMakeFiles/generate.stamp.list
+/build/CMakeFiles/generate.stamp.depend
+/sidescroller.vcxproj.filters

@@ -12,5 +12,5 @@ int main()
 		wm.Update();
 	}
 
-	wm.ShutDown()
+	wm.ShutDown();
 }

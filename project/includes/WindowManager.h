@@ -9,7 +9,7 @@ public:
 	WindowManager();
 	bool Initialize();
 	void Update();
-	bool ShutDown();
+	void ShutDown();
 
 
 private:

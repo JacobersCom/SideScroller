@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/dev/sidescroller/build/cmake_install.cmake",
-		"D:/dev/sidescroller/build/project/cmake_install.cmake",
-		"D:/dev/sidescroller/build/game/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

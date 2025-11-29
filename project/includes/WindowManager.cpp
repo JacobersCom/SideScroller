@@ -25,7 +25,12 @@ bool WindowManager::Initialize()
 	return true;
 }
 
-bool WindowManager::ShutDown()
+void WindowManager::Update()
+{
+	
+}
+
+void WindowManager::ShutDown()
 {
 	SDL_DestroyWindow(window);
 
