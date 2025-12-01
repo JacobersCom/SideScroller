@@ -3,9 +3,9 @@
 #include "Defines.h"
 #include "WindowManager.h"
 
-class RendererManager : public WindowManager
+class RendererManager 
 {
-	bool Initialize();
+	bool Initialize(SDL_Window* window);
 
 private:
 

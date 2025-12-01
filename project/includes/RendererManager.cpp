@@ -8,7 +8,7 @@ RendererManager::RendererManager()
 	isRunning = false;
 }
 
-bool RendererManager::Initialize()
+bool RendererManager::Initialize(SDL_Window* window)
 {
 	renderer = SDL_CreateRenderer(window, "sidescroller");
 
