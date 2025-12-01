@@ -9,7 +9,7 @@ int main()
 
 	while (GameState == true)
 	{
-		wm.Update();
+		
 	}
 
 	wm.ShutDown();
