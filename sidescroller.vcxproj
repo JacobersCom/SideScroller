@@ -145,6 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="project\includes\Actor.cpp" />
+    <ClCompile Include="project\includes\Component.cpp" />
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\RenderManager.cpp" />
@@ -153,6 +155,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="project\includes\Actor.h" />
+    <ClInclude Include="project\includes\Componet.h" />
     <ClInclude Include="project\includes\Defines.h" />
     <ClInclude Include="project\includes\InputManager.h" />
     <ClInclude Include="project\includes\RenderManager.h" />
