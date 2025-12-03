@@ -144,7 +144,7 @@
     <Text Include="project\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\RenderManager.cpp" />
@@ -152,7 +152,7 @@
     <ClCompile Include="project\includes\WindowManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Actor.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="project\includes\Defines.h" />
     <ClInclude Include="project\includes\InputManager.h" />
     <ClInclude Include="project\includes\RenderManager.h" />
