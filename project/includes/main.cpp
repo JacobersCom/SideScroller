@@ -7,7 +7,7 @@ int main()
 
 	bool GameState = wm.Initialize();
 
-	while (GameState == true)
+	while (GameState)
 	{
 		
 	}
