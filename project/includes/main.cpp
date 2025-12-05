@@ -1,6 +1,5 @@
 #include "WindowManager.h"
 
-
 int main()
 {
 	WindowManager wm;
@@ -9,7 +8,7 @@ int main()
 
 	while (GameState)
 	{
-		
+		wm.GameLoop();
 	}
 
 	wm.ShutDown();

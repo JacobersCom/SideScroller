@@ -4,5 +4,5 @@
 
 InputManager::InputManager()
 {
-	keyState = SDL_GetKeyboardState(NULL);
+	//keyState = SDL_GetKeyboardState(NULL);
 }
