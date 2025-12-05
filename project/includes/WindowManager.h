@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Defines.h"
-#include <chrono>
+
 
 class WindowManager
 {
@@ -13,12 +13,12 @@ public:
 	void ShutDown();
 
 	void UpdateGame();
-	
+
 private:
 
 
 	SDL_Window* window;
 	bool isRunning;
-	std::chrono::steady_clock::time_point lastFrame;
+	
 };
 

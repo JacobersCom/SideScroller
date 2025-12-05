@@ -4,8 +4,6 @@ WindowManager::WindowManager()
 {
 	window = nullptr;
 	isRunning = false;
-
-	lastFrame = std::chrono::duration<floa>
 }
 
 bool WindowManager::Initialize()
@@ -24,7 +22,7 @@ bool WindowManager::Initialize()
 		return false;
 	}
 	
-	return true;
+	isRunning = true;
 }
 
 void WindowManager::GameLoop()
@@ -38,17 +36,19 @@ void WindowManager::GameLoop()
 
 void WindowManager::UpdateGame()
 {
-	constexpr std::chrono::duration<float> highLimit(0.5f);
+	//This props wont work but whatever for now
 
+	auto lastFrame = std::chrono::steady_clock::now();
 	auto currentFrame = std::chrono::steady_clock::now();
 	
-	auto deltaTime = std::chrono::duration<float>(currentFrame - lastFrame) / 1000.0f;
+	std::chrono::duration<float> delta = (currentFrame - lastFrame);
+	float deltaTime = delta.count();
 	lastFrame = currentFrame;
 
-	if (deltaTime > highLimit)
+	/*if (deltaTime > highLimit)
 	{
 		deltaTime = highLimit;
-	}
+	}*/
 }
 
 void WindowManager::ShutDown()

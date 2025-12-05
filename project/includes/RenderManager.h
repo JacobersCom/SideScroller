@@ -1,13 +1,12 @@
 #pragma once
 
-#include "Defines.h"
-#include "WindowManager.h"
+
 
 class RenderManager 
 {
 public:
 
-	bool Initialize(SDL_Window* window);
+	//bool Initialize(SDL_Window* window);
 	RenderManager();
 	~RenderManager();
 
@@ -16,6 +15,6 @@ public:
 
 private:
 
-	SDL_Renderer* renderer;
+	//SDL_Renderer* renderer;
 	bool isRunning;
 };
