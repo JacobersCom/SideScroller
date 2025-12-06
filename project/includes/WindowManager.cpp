@@ -1,6 +1,11 @@
 #include "WindowManager.h""
 #include "Root.h"
 
+#ifdef _DEBUG
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
+
+
 WindowManager::WindowManager()
 {
 	window = nullptr;

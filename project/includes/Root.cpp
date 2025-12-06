@@ -1,17 +1,15 @@
 #include "Root.h"
 
+#ifdef _DEBUG
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
+
 Root::Root()
 {
 	isRunning = true;
 	mWindowManager = nullptr;
 	mRenderManager = nullptr;
 
-}
-
-Root::~Root()
-{
-	delete mWindowManager;
-	delete mRenderManager;
 }
 
 bool Root::initalize()
@@ -35,5 +33,10 @@ void Root::GameLoop()
 
 void Root::ShutDown()
 {
+
+
 	mWindowManager->ShutDown();
+
+	delete mWindowManager;
+	delete mRenderManager;
 }

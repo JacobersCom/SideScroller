@@ -8,7 +8,6 @@ class Root
 public:
 
 	Root();
-	~Root();
 
 	bool initalize();
 	void GameLoop();
