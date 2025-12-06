@@ -1,4 +1,5 @@
 #include "WindowManager.h""
+#include "Root.h"
 
 WindowManager::WindowManager()
 {
@@ -24,6 +25,7 @@ bool WindowManager::Initialize()
 	
 	return true;
 }
+
 
 void WindowManager::GameLoop()
 {

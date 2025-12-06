@@ -12,9 +12,10 @@ public:
 
 	bool initalize();
 	void GameLoop();
+	void ShutDown();
 
 private:
-
+	bool isRunning;
 	WindowManager* mWindowManager;
 	RenderManager* mRenderManager;
 };

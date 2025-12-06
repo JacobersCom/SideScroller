@@ -2,8 +2,10 @@
 
 Root::Root()
 {
+	isRunning = true;
 	mWindowManager = nullptr;
 	mRenderManager = nullptr;
+
 }
 
 Root::~Root()
@@ -21,4 +23,17 @@ bool Root::initalize()
 	mRenderManager->Initialize(mWindowManager->window);
 
 	return true;
+}
+
+void Root::GameLoop()
+{
+	while (isRunning)
+	{
+		mWindowManager->UpdateGame();
+	}
+}
+
+void Root::ShutDown()
+{
+	mWindowManager->ShutDown();
 }

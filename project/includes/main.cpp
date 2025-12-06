@@ -1,17 +1,15 @@
-#include "WindowManager.h"
-#include "RenderManager.h"
+#include "Root.h"
 
 int main()
 {
-	WindowManager wm;
-	RenderManager rm;
+	Root r;
 
-	bool GameState = wm.Initialize();
+	bool GameState = r.initalize();
 
 	while (GameState)
 	{
-		wm.GameLoop();
+		r.GameLoop();
 	}
 
-	wm.ShutDown();
+	r.ShutDown();
 }

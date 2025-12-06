@@ -145,6 +145,7 @@
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\RenderManager.cpp" />
+    <ClCompile Include="project\includes\Root.cpp" />
     <ClCompile Include="project\includes\WindowManager.cpp" />
     <ClCompile Include="project\includes\WindowManager.h" />
   </ItemGroup>
