@@ -3,7 +3,7 @@
 WindowManager::WindowManager()
 {
 	window = nullptr;
-	isRunning = false;
+	isRunning = true;
 }
 
 bool WindowManager::Initialize()
@@ -22,7 +22,7 @@ bool WindowManager::Initialize()
 		return false;
 	}
 	
-	isRunning = true;
+	return true;
 }
 
 void WindowManager::GameLoop()
@@ -41,7 +41,7 @@ void WindowManager::UpdateGame()
 	auto lastFrame = std::chrono::steady_clock::now();
 	auto currentFrame = std::chrono::steady_clock::now();
 	
-	std::chrono::duration<float> delta = (currentFrame - lastFrame);
+	std::chrono::duration<float> delta = (currentFrame - lastFrame) / 1000.0f;
 	float deltaTime = delta.count();
 	lastFrame = currentFrame;
 
