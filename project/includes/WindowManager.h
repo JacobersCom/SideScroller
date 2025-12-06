@@ -14,8 +14,7 @@ public:
 
 	void UpdateGame();
 
-private:
-
+//Member fields
 
 	SDL_Window* window;
 	bool isRunning;
