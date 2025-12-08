@@ -1,4 +1,8 @@
 #pragma once
+#ifdef _DEBUG
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#endif
+
 
 #include "RenderManager.h"
 
@@ -10,31 +14,53 @@
 //	static RenderManager sSingleton;
 //	return sSingleton;
 //}
-//
-//RenderManager::RenderManager()
-//{
-//	
-//	renderer = nullptr;
-//	isRunning = false;
-//}
-//
-//RenderManager::~RenderManager()
-//{
-//}
-//
-//bool RenderManager::Initialize(SDL_Window* window)
-//{
-//	//Start up other managers we depend on
-//	//by using their get functions
-//
-//	renderer = SDL_CreateRenderer(window, "sidescroller");
-//
-//	if (!renderer)
-//	{
-//		SDL_Log("ERROR: Failed to initialize rendering engine: %s\n", SDL_GetError);
-//		return false;
-//	}
-//
-//	return true;
-//
-//}
+
+RenderManager::RenderManager()
+{
+	renderer = nullptr;
+	isRunning = false;
+}
+
+RenderManager::~RenderManager()
+{
+	
+}
+
+bool RenderManager::Initialize(SDL_Window* window)
+{
+	
+	renderer = SDL_CreateRenderer(window, NULL);
+
+	if (!renderer)
+	{
+		SDL_Log("ERROR: Failed to initialize rendering engine %s\n", SDL_GetError);
+		
+	}
+
+	return isRunning = true;
+
+}
+
+void RenderManager::RenderLoop()
+{
+	while (isRunning)
+	{
+		DrawBackGround();
+	}
+}
+
+void RenderManager::DrawBackGround()
+{
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
+	//Clears the renderer with the current draw color
+	SDL_RenderClear(renderer);
+
+	//Updates the screen with any rendering performed since the last call
+	SDL_RenderPresent(renderer);
+}
+
+void RenderManager::ShutDown()
+{
+	SDL_DestroyRenderer(renderer);
+}

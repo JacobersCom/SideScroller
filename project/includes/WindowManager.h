@@ -8,13 +8,15 @@ class WindowManager
 public:
 
 	WindowManager();
+	~WindowManager();
+
 	bool Initialize();
 	void GameLoop();
 	void ShutDown();
 
 	void UpdateGame();
 
-private:
+//Member fields
 
 
 	SDL_Window* window;

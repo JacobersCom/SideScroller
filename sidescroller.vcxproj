@@ -145,6 +145,7 @@
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\RenderManager.cpp" />
+    <ClCompile Include="project\includes\Root.cpp" />
     <ClCompile Include="project\includes\WindowManager.cpp" />
     <ClCompile Include="project\includes\WindowManager.h" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="project\includes\Defines.h" />
     <ClInclude Include="project\includes\InputManager.h" />
     <ClInclude Include="project\includes\RenderManager.h" />
+    <ClInclude Include="project\includes\Root.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
