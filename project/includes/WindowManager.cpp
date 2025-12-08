@@ -1,5 +1,4 @@
 #include "WindowManager.h""
-#include "Root.h"
 
 #ifdef _DEBUG
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
@@ -10,6 +9,11 @@ WindowManager::WindowManager()
 {
 	isRunning = false;
 	window = nullptr;
+}
+
+WindowManager::~WindowManager()
+{
+	delete window;
 }
 
 bool WindowManager::Initialize()
@@ -60,4 +64,5 @@ void WindowManager::UpdateGame()
 void WindowManager::ShutDown()
 {
 	SDL_DestroyWindow(window);
+	
 }

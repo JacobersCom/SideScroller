@@ -8,6 +8,8 @@ class WindowManager
 public:
 
 	WindowManager();
+	~WindowManager();
+
 	bool Initialize();
 	void GameLoop();
 	void ShutDown();
@@ -15,6 +17,7 @@ public:
 	void UpdateGame();
 
 //Member fields
+
 
 	SDL_Window* window;
 	bool isRunning;

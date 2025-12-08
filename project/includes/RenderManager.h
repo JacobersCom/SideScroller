@@ -7,6 +7,8 @@ class RenderManager
 public:
 
 	RenderManager();
+	~RenderManager();
+
 	bool Initialize(SDL_Window* window);
 	void RenderLoop();
 	void DrawBackGround();
@@ -14,8 +16,6 @@ public:
 
 	//Get the one and only instance
 	//static RenderManager& get();
-
-private:
 
 	SDL_Renderer* renderer;
 	bool isRunning;

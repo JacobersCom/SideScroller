@@ -21,6 +21,11 @@ RenderManager::RenderManager()
 	isRunning = false;
 }
 
+RenderManager::~RenderManager()
+{
+	delete renderer;
+}
+
 bool RenderManager::Initialize(SDL_Window* window)
 {
 	
