@@ -6,7 +6,7 @@
 
 Root::Root()
 {
-	isRunning = true;
+	isRunning = false;
 	mWindowManager = nullptr;
 	mRenderManager = nullptr;
 
@@ -20,7 +20,7 @@ bool Root::Initialize()
 	mWindowManager->Initialize();
 	mRenderManager->Initialize(mWindowManager->window);
 
-	return true;
+	return isRunning = true;
 }
 
 void Root::GameLoop()
@@ -34,9 +34,11 @@ void Root::GameLoop()
 
 void Root::ShutDown()
 {
-
+	mRenderManager->ShutDown();
 	mWindowManager->ShutDown();
-
+	
 	delete mWindowManager;
 	delete mRenderManager;
+
+	SDL_Quit();
 }

@@ -9,7 +9,7 @@ public:
 
 	Root();
 
-	bool initalize();
+	bool Initialize();
 	void GameLoop();
 	void ShutDown();
 

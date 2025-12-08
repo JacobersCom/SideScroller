@@ -18,7 +18,7 @@
 RenderManager::RenderManager()
 {
 	renderer = nullptr;
-	isRunning = true;
+	isRunning = false;
 }
 
 bool RenderManager::Initialize(SDL_Window* window)
@@ -29,14 +29,22 @@ bool RenderManager::Initialize(SDL_Window* window)
 	if (!renderer)
 	{
 		SDL_Log("ERROR: Failed to initialize rendering engine %s\n", SDL_GetError);
-		return false;
+		
 	}
 
-	return true;
+	return isRunning = true;
 
 }
 
 void RenderManager::RenderLoop()
+{
+	while (isRunning)
+	{
+		DrawBackGround();
+	}
+}
+
+void RenderManager::DrawBackGround()
 {
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
@@ -45,4 +53,9 @@ void RenderManager::RenderLoop()
 
 	//Updates the screen with any rendering performed since the last call
 	SDL_RenderPresent(renderer);
+}
+
+void RenderManager::ShutDown()
+{
+	SDL_DestroyRenderer(renderer);
 }

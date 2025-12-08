@@ -9,6 +9,7 @@ public:
 	RenderManager();
 	bool Initialize(SDL_Window* window);
 	void RenderLoop();
+	void DrawBackGround();
 	void ShutDown();
 
 	//Get the one and only instance
