@@ -44,6 +44,7 @@ void WindowManager::GameLoop()
 void WindowManager::UpdateGame()
 {
 	//This props wont work but whatever for now
+	float highLimit = 0.05;
 
 	auto lastFrame = std::chrono::steady_clock::now();
 	auto currentFrame = std::chrono::steady_clock::now();
@@ -52,10 +53,10 @@ void WindowManager::UpdateGame()
 	float deltaTime = delta.count();
 	lastFrame = currentFrame;
 
-	/*if (deltaTime > highLimit)
+	if (deltaTime > highLimit)
 	{
 		deltaTime = highLimit;
-	}*/
+	}
 }
 
 void WindowManager::ShutDown()

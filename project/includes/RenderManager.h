@@ -6,12 +6,13 @@ class RenderManager
 {
 public:
 
-	bool Initialize(SDL_Window* window);
 	RenderManager();
-	~RenderManager();
+	bool Initialize(SDL_Window* window);
+	void RenderLoop();
+	void ShutDown();
 
 	//Get the one and only instance
-	static RenderManager& get();
+	//static RenderManager& get();
 
 private:
 

@@ -12,7 +12,7 @@ Root::Root()
 
 }
 
-bool Root::initalize()
+bool Root::Initialize()
 {
 	mWindowManager = new WindowManager();
 	mRenderManager = new RenderManager(); 
@@ -28,12 +28,12 @@ void Root::GameLoop()
 	while (isRunning)
 	{
 		mWindowManager->UpdateGame();
+		mRenderManager->RenderLoop();
 	}
 }
 
 void Root::ShutDown()
 {
-
 
 	mWindowManager->ShutDown();
 
