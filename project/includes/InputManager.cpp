@@ -5,21 +5,23 @@
 InputManager::InputManager()
 {
 	keyState = SDL_GetKeyboardState(NULL);
-	event = new SDL_Event;
+	
 }
 
 InputManager::~InputManager()
 {
-	delete[] keyState;
-	delete event;
+	
 }
 
 void InputManager::ProcessInput(bool state)
 {
-	while (SDL_PollEvent(event))
+	SDL_Event event;
+
+	while (SDL_PollEvent(&event))
 	{
-		switch (event->type)
+		switch (event.type)
 		{
+
 			case SDL_EVENT_QUIT:
 			{
 				state = false;
@@ -32,6 +34,5 @@ void InputManager::ProcessInput(bool state)
 
 void InputManager::ShutDown()
 {
-	delete[] keyState;
-	delete event;
+	
 }

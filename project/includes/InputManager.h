@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SDL3/SDL.h"
-
+#include <iostream>
 
 class InputManager
 {
@@ -16,6 +16,5 @@ public:
 	void ShutDown();
 
 
-	SDL_Event* event;
-	const bool* keyState = nullptr;
+	const bool* keyState;
 };
