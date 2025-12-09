@@ -4,6 +4,8 @@
 #include "RenderManager.h"
 #include "InputManager.h"
 
+#include "Actor.h"
+
 class Root
 {
 public:
@@ -15,6 +17,8 @@ public:
 	void GameLoop();
 	void ShutDown();
 
+	void AddActor(Actor* mActor);
+	void RemoveActor(Actor* mActor);
 
 private:
 
@@ -22,4 +26,7 @@ private:
 	WindowManager* mWindowManager;
 	RenderManager* mRenderManager;
 	InputManager* mInputManager;
+
+	std::vector<Actor*> mActors;
+	std::vector<Actor*> mPendingActors;
 };

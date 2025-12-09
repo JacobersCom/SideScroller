@@ -1,19 +1,11 @@
 #pragma once
+
+#include "RenderManager.h"
+
 #ifdef _DEBUG
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 #endif
 
-
-#include "RenderManager.h"
-
-
-//RenderManager& RenderManager::get()
-//{
-//	//This function-static will be constructed on the 
-//	//first call to this function
-//	static RenderManager sSingleton;
-//	return sSingleton;
-//}
 
 RenderManager::RenderManager()
 {
@@ -36,10 +28,9 @@ bool RenderManager::Initialize(SDL_Window* window)
 		SDL_Log("ERROR: Failed to initialize rendering engine %s\n", SDL_GetError);
 		
 	}
-
 	return isRunning = true;
-
 }
+
 
 void RenderManager::RenderLoop()
 {
