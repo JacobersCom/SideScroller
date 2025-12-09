@@ -31,9 +31,6 @@ bool RenderManager::Initialize(SDL_Window* window)
 	return isRunning = true;
 }
 
-	return isRunning = true;
-
-}
 
 void RenderManager::RenderLoop()
 {

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Defines.h"
+
+#include <vector>
+
 class Actor
 {
 public:
@@ -12,7 +16,7 @@ public:
 	};
 
 	//Contructor/destructor
-	Actor(class Game* game);
+	Actor(class Root* game);
 
 	virtual ~Actor();
 
@@ -45,6 +49,6 @@ private:
 
 	std::vector<class Component*> mComponents;
 
-	class Game* mGame;
+	Root* mGame;
 
 };
