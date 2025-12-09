@@ -1,43 +1,31 @@
 #pragma once
+
+#include "RenderManager.h"
+
 #ifdef _DEBUG
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 #endif
 
 
-#include "RenderManager.h"
-
-
-RenderManager& RenderManager::get()
-{
-	//This function-static will be constructed on the 
-	//first call to this function
-	static RenderManager sSingleton;
-	return sSingleton;
-}
-
 RenderManager::RenderManager()
 {
 	renderer = nullptr;
-	isRunning = true;
-}
-
-RenderManager::~RenderManager()
-{
+	isRunning = false;
 }
 
 bool RenderManager::Initialize(SDL_Window* window)
 {
-	//Start up other managers we depend on
-	//by using their get functions
-
-	renderer = SDL_CreateRenderer(window, "sidescroller");
+	renderer = SDL_CreateRenderer(window, "SideScroller");
 
 	if (!renderer)
 	{
 		SDL_Log("ERROR: Failed to initialize rendering engine: %s\n", SDL_GetError);
-		return false;
+		return isRunning;
 	}
+	return isRunning = true;
+}
 
-	return true;
-
+void RenderManager::ShutDown()
+{
+	SDL_DestroyRenderer(renderer);
 }

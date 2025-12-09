@@ -7,15 +7,13 @@
 Root::Root()
 {
 	isRunning = true;
-	mWindowManager = nullptr;
-	mRenderManager = nullptr;
+	mWindowManager = new WindowManager();
+	mRenderManager = new RenderManager();
 
 }
 
 bool Root::initalize()
 {
-	mWindowManager = new WindowManager();
-	mRenderManager = new RenderManager(); 
 
 	mWindowManager->Initialize();
 	mRenderManager->Initialize(mWindowManager->window);
