@@ -6,35 +6,46 @@
 
 Root::Root()
 {
-	isRunning = true;
-	mWindowManager = new WindowManager();
-	mRenderManager = new RenderManager();
+	GameState = false;
+	mWindowManager = nullptr;
+	mRenderManager = nullptr;
+	mInputManager = nullptr;
 
 }
 
-bool Root::initalize()
+bool Root::Initialize()
 {
+	mWindowManager = new WindowManager();
+	mRenderManager = new RenderManager(); 
+	mInputManager = new InputManager();
 
 	mWindowManager->Initialize();
 	mRenderManager->Initialize(mWindowManager->window);
 
-	return true;
+	return GameState = true;
 }
 
 void Root::GameLoop()
 {
-	while (isRunning)
+	while (GameState)
 	{
 		mWindowManager->UpdateGame();
+		mRenderManager->RenderLoop();
+		mInputManager->ProcessInput(GameState);
 	}
 }
 
 void Root::ShutDown()
 {
-
-
+	mRenderManager->ShutDown();
 	mWindowManager->ShutDown();
 
-	delete mWindowManager;
+	SDL_Quit();
+}
+
+Root::~Root()
+{
 	delete mRenderManager;
+	delete mWindowManager;
+	delete mInputManager;
 }

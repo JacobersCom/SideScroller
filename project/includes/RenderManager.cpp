@@ -13,16 +13,45 @@ RenderManager::RenderManager()
 	isRunning = false;
 }
 
+RenderManager::~RenderManager()
+{
+	
+}
+
 bool RenderManager::Initialize(SDL_Window* window)
 {
-	renderer = SDL_CreateRenderer(window, "SideScroller");
+	
+	renderer = SDL_CreateRenderer(window, NULL);
 
 	if (!renderer)
 	{
-		SDL_Log("ERROR: Failed to initialize rendering engine: %s\n", SDL_GetError);
-		return isRunning;
+		SDL_Log("ERROR: Failed to initialize rendering engine %s\n", SDL_GetError);
+		
 	}
 	return isRunning = true;
+}
+
+	return isRunning = true;
+
+}
+
+void RenderManager::RenderLoop()
+{
+	while (isRunning)
+	{
+		DrawBackGround();
+	}
+}
+
+void RenderManager::DrawBackGround()
+{
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
+	//Clears the renderer with the current draw color
+	SDL_RenderClear(renderer);
+
+	//Updates the screen with any rendering performed since the last call
+	SDL_RenderPresent(renderer);
 }
 
 void RenderManager::ShutDown()

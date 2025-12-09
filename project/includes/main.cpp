@@ -16,7 +16,7 @@ int main()
 
 	Root r;
 
-	bool GameState = r.initalize();
+	bool GameState = r.Initialize();
 
 	while (GameState)
 	{
