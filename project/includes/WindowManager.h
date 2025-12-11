@@ -24,7 +24,10 @@ public:
 
 
 	SDL_Window* window;
+	
 	bool isRunning;
 	
+	float deltaTime;
+
 };
 
