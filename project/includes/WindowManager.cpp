@@ -8,6 +8,7 @@
 WindowManager::WindowManager()
 {
 	isRunning = false;
+	deltaTime = 0;
 	window = nullptr;
 }
 
@@ -52,7 +53,7 @@ void WindowManager::UpdateGame()
 	auto currentFrame = std::chrono::steady_clock::now();
 	
 	std::chrono::duration<float> delta = (currentFrame - lastFrame) / 1000.0f;
-	float deltaTime = delta.count();
+	deltaTime = delta.count();
 	lastFrame = currentFrame;
 
 	if (deltaTime > highLimit)

@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Defines.h"
+#include "Root.h"
 
 #include <vector>
+#include <memory>
 
 class Actor
 {
@@ -39,16 +41,17 @@ public:
 	void RemoveComponent(class Component* comp);
 
 private:
-
+	
+	std::unique_ptr<class Root> mRoot;
+	
 	State mState;
+
 
 	vec2 mPosition; // Center of actor
 
 	float mScale;	//Scale of actor 1.0 for 100%
 	float mRotation; // Angle in radians
 
-	std::vector<class Component*> mComponents;
-
-	Root* mGame;
+	std::vector<std::unique_ptr<Component>> mComponents;
 
 };

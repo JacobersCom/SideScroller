@@ -19,6 +19,7 @@ public:
 
 	void AddActor(Actor* mActor);
 	void RemoveActor(Actor* mActor);
+	void UpdateActor();
 
 private:
 

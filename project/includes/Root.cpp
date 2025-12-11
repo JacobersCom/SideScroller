@@ -32,6 +32,8 @@ void Root::GameLoop()
 		mWindowManager->UpdateGame();
 		mRenderManager->RenderLoop();
 		mInputManager->ProcessInput(GameState);
+		
+		UpdateActor();
 	}
 }
 
@@ -56,7 +58,7 @@ void Root::AddActor(Actor* _Actor)
 		mActors.emplace_back(_Actor);
 	}
 }
-
+//TO-DO (Rework function logic)
 void Root::RemoveActor(Actor* _Actor)
 {
 	// if updating actors remove from pending
@@ -80,6 +82,44 @@ void Root::RemoveActor(Actor* _Actor)
 	}
 }
 
+void Root::UpdateActor()
+{
+	UpdatingActors = true;
+
+	//Update all actors
+	for (auto actor : mActors)
+	{
+		actor->Update(mWindowManager->deltaTime);
+	}
+
+	UpdatingActors = false;
+
+	for (auto pending : mPendingActors)
+	{
+		mActors.emplace_back(pending);
+	}
+
+	//Clear out all pending actors after moving them to mActors
+	mPendingActors.clear();
+
+	//Add "dead" actors to a temp vec
+	std::vector<Actor*> deadActor;
+	for (auto actor : mActors)
+	{
+		if (actor->EDead)
+		{
+			deadActor.emplace_back(actor);
+		}
+	}
+
+	//Delete dead Actors which will remove them from mActors
+
+	for (auto actor : deadActor)
+	{
+		delete actor;
+	}
+}
+
 void Root::ShutDown()
 {
 	mRenderManager->ShutDown();
@@ -93,4 +133,9 @@ Root::~Root()
 	delete mRenderManager;
 	delete mWindowManager;
 	delete mInputManager;
+
+	while (!mActors.empty())
+	{
+		delete mActors.back();
+	}
 }
