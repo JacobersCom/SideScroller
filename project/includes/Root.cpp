@@ -44,19 +44,41 @@ void Root::GameLoop()
 		I'd use push_back.
 */
 
-void Root::AddActor(Actor* Actor)
+void Root::AddActor(Actor* _Actor)
 {
 	//if updating actors add to pending
 	if (UpdatingActors)
 	{
-		mPendingActors.emplace_back(Actor);
+		mPendingActors.emplace_back(_Actor);
 	}
 	else
 	{
-		mActors.emplace_back(Actor);
+		mActors.emplace_back(_Actor);
 	}
 }
 
+void Root::RemoveActor(Actor* _Actor)
+{
+	// if updating actors remove from pending
+	if (UpdatingActors) 
+	{	
+		//Find the actor within mPendingActors
+		auto it = std::remove(mPendingActors.begin(),
+			mPendingActors.end(), _Actor);
+		
+		//KILL IT
+		mPendingActors.erase(it, mPendingActors.end());
+	}
+	else
+	{
+		//Find the actor within mActors
+		auto it = std::remove(mActors.begin(),
+			mActors.end(), _Actor);
+
+		//KILL IT
+		mActors.erase(it, mActors.end());
+	}
+}
 
 void Root::ShutDown()
 {
