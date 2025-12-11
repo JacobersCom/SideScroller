@@ -22,11 +22,13 @@ public:
 
 private:
 
-	bool GameState;
 	WindowManager* mWindowManager;
 	RenderManager* mRenderManager;
 	InputManager* mInputManager;
 
 	std::vector<Actor*> mActors;
 	std::vector<Actor*> mPendingActors;
+	
+	bool GameState;
+	bool UpdatingActors;
 };

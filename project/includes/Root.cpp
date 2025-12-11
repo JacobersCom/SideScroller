@@ -35,6 +35,29 @@ void Root::GameLoop()
 	}
 }
 
+/*
+		using emplace_back instead of push_back
+		because instead of creating a temp object
+		and then a copie, I can just construct the Actor
+		directly in-place within the vector's memory,
+		because Actor is a complex object, if it wasn't 
+		I'd use push_back.
+*/
+
+void Root::AddActor(Actor* Actor)
+{
+	//if updating actors add to pending
+	if (UpdatingActors)
+	{
+		mPendingActors.emplace_back(Actor);
+	}
+	else
+	{
+		mActors.emplace_back(Actor);
+	}
+}
+
+
 void Root::ShutDown()
 {
 	mRenderManager->ShutDown();
