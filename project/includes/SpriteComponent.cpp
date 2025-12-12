@@ -1,5 +1,13 @@
 #include "SpriteComponent.h"
 
+void SpriteComponent::SetTexture(SDL_Texture* texture)
+{
+	mTexture = texture;
+	SDL_GetTextureProperties(mTexture);
+	mTextHeight = mTexture->h;
+	mTextWidth = mTexture->w;
+}
+
 SDL_Texture* SpriteComponent::LoadTexture(const char* fileName)
 {
 	SDL_Surface* surf = IMG_Load(fileName);
@@ -15,7 +23,7 @@ SDL_Texture* SpriteComponent::LoadTexture(const char* fileName)
 	if (!text)
 	{
 		SDL_Log("ERROR: Failed to convert surface to texture for %s", fileName);
-		return nullptr
+		return nullptr;
 	}
 	return text;
 }
