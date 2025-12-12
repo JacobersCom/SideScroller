@@ -15,7 +15,7 @@ SDL_Texture* SpriteComponent::LoadTexture(const char* fileName)
 	if (!text)
 	{
 		SDL_Log("ERROR: Failed to convert surface to texture for %s", fileName);
-		return nullptr
+		return nullptr;
 	}
 	return text;
 }
