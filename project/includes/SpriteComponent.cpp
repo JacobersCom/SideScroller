@@ -1,5 +1,13 @@
 #include "SpriteComponent.h"
 
+void SpriteComponent::SetTexture(SDL_Texture* texture)
+{
+	mTexture = texture;
+	SDL_GetTextureProperties(mTexture);
+	mTextHeight = mTexture->h;
+	mTextWidth = mTexture->w;
+}
+
 SDL_Texture* SpriteComponent::LoadTexture(const char* fileName)
 {
 	SDL_Surface* surf = IMG_Load(fileName);
