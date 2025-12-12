@@ -5,6 +5,7 @@
 #include "InputManager.h"
 
 #include "Actor.h"
+#include "SpriteComponent.h"
 
 class Root
 {
@@ -21,6 +22,8 @@ public:
 	void RemoveActor(Actor* mActor);
 	void UpdateActor();
 
+	void AddSprite(SpriteComponent* mSprite);
+
 private:
 
 	WindowManager* mWindowManager;
@@ -29,6 +32,7 @@ private:
 
 	std::vector<Actor*> mActors;
 	std::vector<Actor*> mPendingActors;
+	std::vector<SpriteComponent*> mSprites;
 	
 	bool GameState;
 	bool UpdatingActors;

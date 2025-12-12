@@ -120,6 +120,31 @@ void Root::UpdateActor()
 	}
 }
 
+/*
+AddSprite ensures the draw order of sprite stays sorted
+by checking the drawPos of the current sprite and comparing it
+againest the sprites the first element in the sprite vector
+*/
+void Root::AddSprite(SpriteComponent* mSprite)
+{
+	int drawPos = mSprite->GetDrawOrder();
+	auto iter = mSprites.begin();
+	
+	for (; iter != mSprites.end(); ++iter)
+	{
+		/*
+		if the drawPos is less than the current sprite's
+		drawPos break
+		*/
+		if (drawPos < (*iter)->GetDrawOrder())
+		{
+			break;
+		}
+	}
+	//Insert sprite before the pos of the iter
+	mSprites.insert(iter, mSprite);
+}
+
 void Root::ShutDown()
 {
 	mRenderManager->ShutDown();
