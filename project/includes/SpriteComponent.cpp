@@ -12,10 +12,14 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		r.w = static_cast<int>(mTextWidth * mOwner->GetScale());
 		r.h = static_cast<int>(mTextWidth * mOwner->GetScale());
 
-		// center the rect around the owner
-		r.x = static_cast<int>(mOwner->Get)
-
+		// center the rect around the owner you will need to add - r / 2 but see what this does
+		r.x = static_cast<int>(mOwner->GetPosition().x);
+		r.y = static_cast<int>(mOwner->GetPosition().y);
 	}
+
+	//Draw
+
+	SDL_RendercopyEx(renderer,)
 }
 
 // move this to Root.h
