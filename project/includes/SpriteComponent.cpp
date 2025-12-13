@@ -1,5 +1,19 @@
 #include "SpriteComponent.h"
 
+void SpriteComponent::Draw(SDL_Renderer* renderer)
+{
+
+	//if mTexture is not null
+	if (mTexture)
+	{
+		SDL_Rect r;
+
+		//Scale by the onwer of the spirts width
+		r.w = static_cast<int>(mTextWidth * mOwner->GetScale)
+	}
+}
+
+// move this to Root.h
 void SpriteComponent::SetTexture(SDL_Texture* texture)
 {
 	mTexture = texture;

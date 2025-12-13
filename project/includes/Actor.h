@@ -34,6 +34,8 @@ public:
 
 
 	//Getter/Setter
+	float GetScale() { return mScale; }
+
 
 	//Add/remove components
 
@@ -45,7 +47,6 @@ private:
 	std::unique_ptr<class Root> mRoot;
 	
 	State mState;
-
 
 	vec2 mPosition; // Center of actor
 
