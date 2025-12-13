@@ -1,5 +1,28 @@
 #include "SpriteComponent.h"
 
+void SpriteComponent::Draw(SDL_Renderer* renderer)
+{
+
+	//if mTexture is not null
+	if (mTexture)
+	{
+		SDL_Rect r;
+
+		//Scale by the onwer's size
+		r.w = static_cast<int>(mTextWidth * mOwner->GetScale());
+		r.h = static_cast<int>(mTextWidth * mOwner->GetScale());
+
+		// center the rect around the owner you will need to add - r / 2 but see what this does
+		r.x = static_cast<int>(mOwner->GetPosition().x);
+		r.y = static_cast<int>(mOwner->GetPosition().y);
+	}
+
+	//Draw
+
+	SDL_RendercopyEx(renderer,)
+}
+
+// move this to Root.h
 void SpriteComponent::SetTexture(SDL_Texture* texture)
 {
 	mTexture = texture;
