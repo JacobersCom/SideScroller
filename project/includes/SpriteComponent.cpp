@@ -8,8 +8,13 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 	{
 		SDL_Rect r;
 
-		//Scale by the onwer of the spirts width
-		r.w = static_cast<int>(mTextWidth * mOwner->GetScale)
+		//Scale by the onwer's size
+		r.w = static_cast<int>(mTextWidth * mOwner->GetScale());
+		r.h = static_cast<int>(mTextWidth * mOwner->GetScale());
+
+		// center the rect around the owner
+		r.x = static_cast<int>(mOwner->Get)
+
 	}
 }
 
