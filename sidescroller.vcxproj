@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="project\includes\Actor.cpp" />
     <ClCompile Include="project\includes\AnimComponent.cpp" />
+    <ClCompile Include="project\includes\BGSpriteComponent.cpp" />
     <ClCompile Include="project\includes\Component.cpp" />
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
@@ -154,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="project\includes\Actor.h" />
     <ClInclude Include="project\includes\AnimComponent.h" />
+    <ClInclude Include="project\includes\BGSpriteComponent.h" />
     <ClInclude Include="project\includes\Componet.h" />
     <ClInclude Include="project\includes\Defines.h" />
     <ClInclude Include="project\includes\InputManager.h" />
