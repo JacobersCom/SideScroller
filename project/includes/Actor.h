@@ -36,6 +36,7 @@ public:
 	//Getter/Setter
 	float GetScale() { return mScale; }
 	vec2 GetPosition() { return mPosition; }
+	float GetRotation() { return mRotation; }
 
 
 	//Add/remove components
