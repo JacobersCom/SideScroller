@@ -18,8 +18,8 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 	}
 
 	//Draw
-
-	SDL_RendercopyEx(renderer,)
+	//Needs to be fixed. Done for the weekend.
+	SDL_RenderTexture(renderer, mTexture, &r, -Math::ToDegrees(mOwner->GetRotation()), );
 }
 
 // move this to Root.h
