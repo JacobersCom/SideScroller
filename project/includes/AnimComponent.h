@@ -17,7 +17,7 @@ public :
 	//why override?
 	void Update(float deltaTime) override;
 
-	void SetTexture(const std::vector<SDL_Texture*>& vecTextures);
+	void SetTexture(const SDL_Texture* vecTextures);
 
 	//Getters/Setters
 	float GetAnimFPS() const { return mFPS; }
