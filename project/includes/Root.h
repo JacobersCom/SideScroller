@@ -7,6 +7,8 @@
 #include "Actor.h"
 #include "SpriteComponent.h"
 
+#include <vector>
+
 class Root
 {
 public:
@@ -18,11 +20,11 @@ public:
 	void GameLoop();
 	void ShutDown();
 
-	void AddActor(Actor* mActor);
-	void RemoveActor(Actor* mActor);
+	void AddActor(class Actor* mActor);
+	void RemoveActor(class Actor* mActor);
 	void UpdateActor();
 
-	void AddSprite(SpriteComponent* mSprite);
+	void AddSprite(class SpriteComponent* mSprite);
 
 private:
 

@@ -6,7 +6,7 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 	//if mTexture is not null
 	if (mTexture)
 	{
-		SDL_Rect r;
+		SDL_FRect r;
 
 		//Scale by the onwer's size
 		r.w = static_cast<int>(mTextWidth * mOwner->GetScale());
@@ -15,11 +15,10 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		// center the rect around the owner you will need to add - r / 2 but see what this does
 		r.x = static_cast<int>(mOwner->GetPosition().x);
 		r.y = static_cast<int>(mOwner->GetPosition().y);
-	}
 
-	//Draw
-	//Needs to be fixed. Done for the weekend.
-	SDL_RenderTexture(renderer, mTexture, &r, -Math::ToDegrees(mOwner->GetRotation()), );
+		//This may not work
+		SDL_RenderTextureRotated(renderer, mTexture, nullptr, &r, ToDegrees(mOwner->GetRotation()), nullptr, SDL_FLIP_NONE);
+	}
 }
 
 // move this to Root.h
