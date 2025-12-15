@@ -30,7 +30,6 @@ bool WindowManager::Initialize()
 	{
 		SDL_Log("ERROR: Failed to create window: %s\n", SDL_GetError());
 	}
-	
 	return isRunning = true;
 }
 

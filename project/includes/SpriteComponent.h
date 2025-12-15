@@ -1,6 +1,6 @@
 #pragma once
 
-#pragma region Includes
+#pragma region Class_Includes
 
 #include "Componet.h"
 #include "RenderManager.h"
@@ -8,6 +8,11 @@
 
 #pragma endregion
 
+#pragma region lib_Includes
+
+#include <math.h>
+
+#pragma endregion
 
 
 class SpriteComponent : public Component
