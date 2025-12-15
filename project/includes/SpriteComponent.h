@@ -36,6 +36,7 @@ protected:
 
 	SDL_Texture* mTexture;
 
+	//Order in which the sprite is called to be drawn
 	int mDrawOrder;
 		
 	int mTextWidth;	
