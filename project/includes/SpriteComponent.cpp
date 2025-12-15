@@ -17,7 +17,7 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		r.y = static_cast<int>(mOwner->GetPosition().y);
 
 		//This may not work
-		SDL_RenderTextureRotated(renderer, mTexture, &r, &r, ToDegrees(mOwner->GetRotation()), NULL, SDL_FLIP_NONE);
+		SDL_RenderTextureRotated(renderer, mTexture, nullptr, &r, ToDegrees(mOwner->GetRotation()), nullptr, SDL_FLIP_NONE);
 	}
 }
 
