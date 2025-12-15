@@ -10,5 +10,5 @@ struct vec2
 	float x, y;
 };
 
-constexpr float ToDegrees(float radins) {return  radins * (180 / pi); }
-constexpr float ToRadins(float degrees) { return degrees * (pi / 180); }
+constexpr double ToDegrees(float radins) {return  radins * (180 / pi); }
+constexpr double ToRadins(float degrees) { return degrees * (pi / 180); }

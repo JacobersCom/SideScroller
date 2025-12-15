@@ -5,12 +5,11 @@
 #include "Componet.h"
 #include "RenderManager.h"
 #include "SDL3_image/SDL_image.h"
+#include "Defines.h"
 
 #pragma endregion
 
 #pragma region lib_Includes
-
-#include <math.h>
 
 #pragma endregion
 
