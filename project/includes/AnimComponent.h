@@ -12,7 +12,6 @@ class AnimComponent : public SpriteComponent
 public :
 
 	AnimComponent(class Actor* owner, int drawOrder = 100);
-	~AnimComponent();
 
 	//why override?
 	void Update(float deltaTime) override;

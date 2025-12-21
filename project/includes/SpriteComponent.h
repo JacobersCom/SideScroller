@@ -1,8 +1,9 @@
 #pragma once
 
+
 #pragma region Class_Includes
 
-#include "Componet.h"
+#include "D:/dev/sidescroller/project/includes/Component.h"
 #include "RenderManager.h"
 #include "SDL3_image/SDL_image.h"
 #include "Defines.h"

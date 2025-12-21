@@ -47,7 +47,7 @@ public:
 
 private:
 	
-	std::unique_ptr<class Root> mRoot;
+	class Root* mRoot;
 	
 	State mState;
 
@@ -56,6 +56,6 @@ private:
 	float mScale;	//Scale of actor 1.0 for 100%
 	float mRotation; // Angle in radians
 
-	std::vector<std::unique_ptr<Component>> mComponents;
+	std::vector<Component*> mComponents; //pointer to the component class
 
 };

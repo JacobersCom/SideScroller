@@ -1,5 +1,12 @@
 #include "AnimComponent.h"
 
+AnimComponent::AnimComponent(Actor* owner, int drawOrder)
+	: SpriteComponent(owner, drawOrder)
+{
+	this->mCurrFrame = 0.0f;
+	this->mFPS = 24.0f;
+}
+
 void AnimComponent::Update(float deltaTime)
 {
 	SpriteComponent::Update(deltaTime);

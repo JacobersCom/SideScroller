@@ -1,5 +1,19 @@
 #include "SpriteComponent.h"
 
+SpriteComponent::SpriteComponent(Actor* actor, int draworder)
+	: Component(actor, draworder)
+{
+	this->mTexture = nullptr;
+	this->mTextHeight = 0;
+	this->mTextWidth = 0;
+	this->mDrawOrder = draworder;
+}
+
+SpriteComponent::~SpriteComponent()
+{
+	SDL_DestroyTexture(mTexture);
+}
+
 void SpriteComponent::Draw(SDL_Renderer* renderer)
 {
 
@@ -16,7 +30,7 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		r.x = static_cast<int>(mOwner->GetPosition().x);
 		r.y = static_cast<int>(mOwner->GetPosition().y);
 
-		//This may not work
+	
 		SDL_RenderTextureRotated(renderer, mTexture, nullptr, &r, ToDegrees(mOwner->GetRotation()), nullptr, SDL_FLIP_NONE);
 	}
 }
