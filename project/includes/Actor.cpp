@@ -48,7 +48,7 @@ void Actor::AddComponent(Component* comp)
 	auto iter = this->mComponents.begin();
 	for (; iter != mComponents.end(); ++iter)
 	{
-		if (comp->GetUpdateOrder() < (*iter)->GetUpdateOrder());
+		if (comp->GetUpdateOrder() < (*iter)->GetUpdateOrder())
 		break;
 	}
 	this->mComponents.insert(iter, comp); // inserts the comp at the iter

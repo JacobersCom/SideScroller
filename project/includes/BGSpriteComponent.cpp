@@ -1,5 +1,12 @@
 #include "BGSpriteComponent.h"
 
+BGSpriteComponent::BGSpriteComponent(Actor* player, int drawOrder)
+	: SpriteComponent(player, drawOrder)
+{
+	this->mScreenSize = { 0, 0 };
+	this->mScrollSpeed = 0.0f;
+}
+
 void BGSpriteComponent::Update(float deltaTime)
 {
 	SpriteComponent::Update(deltaTime);

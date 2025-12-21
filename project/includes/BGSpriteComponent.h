@@ -11,7 +11,7 @@ class BGSpriteComponent : public SpriteComponent
 public: 
 
 	//Lower so its in the back ground
-	BGSpriteComponent(class Actor*, int drawOrder = 10);
+	BGSpriteComponent(class Actor* player, int drawOrder = 10);
 
 	//Update and draw from parent 
 	void Update(float deltaTime) override;

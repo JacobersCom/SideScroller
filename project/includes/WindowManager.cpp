@@ -14,7 +14,7 @@ WindowManager::WindowManager()
 
 WindowManager::~WindowManager()
 {
-	delete window;
+	SDL_DestroyWindow(window);
 }
 
 bool WindowManager::Initialize()
