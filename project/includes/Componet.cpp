@@ -2,10 +2,12 @@
 
 Component::Component(Actor* owner, int updateOrder)
 {
-	//How to create a new Component
+	this->mOwner = owner; //The actor owns this component
+	this->mUpdateOrder = mUpdateOrder; //This component will be updated in this order
+	this->mOwner->AddComponent(this); //Add this component to this actor
 }
 
 Component::~Component()
 {
-	//Remove component after its done?
+	delete mOwner;
 }

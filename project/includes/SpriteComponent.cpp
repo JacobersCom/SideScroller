@@ -11,7 +11,7 @@ SpriteComponent::SpriteComponent(Actor* actor, int draworder)
 
 SpriteComponent::~SpriteComponent()
 {
-	//What would happen after the sprite compoenet is destroyed?
+	SDL_DestroyTexture(mTexture);
 }
 
 void SpriteComponent::Draw(SDL_Renderer* renderer)
