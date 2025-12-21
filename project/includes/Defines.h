@@ -8,6 +8,8 @@ constexpr int screen_H = 400;
 struct vec2
 {
 	float x, y;
+
+	void zero() { x = 0, y = 0; }
 };
 
 constexpr double ToDegrees(float radins) {return  radins * (180 / pi); }

@@ -1,6 +1,6 @@
 #include "Actor.h"
 
-Actor::Actor(Root* game)
+Actor::Actor(Root* game): mState(EActive), mRotation(1.0f), mScale(1.0f), mRoot(game)
 {
 	this->mRoot = game;
 	this->mState = State::EActive; // The actor is active
