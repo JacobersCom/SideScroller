@@ -51,7 +51,7 @@ void Actor::AddComponent(Component* comp)
 		if (comp->GetUpdateOrder() < (*iter)->GetUpdateOrder());
 		break;
 	}
-	
+	this->mComponents.insert(iter, comp); // inserts the comp at the iter
 }
 
 void Actor::RemoveComponent(Component* comp)
