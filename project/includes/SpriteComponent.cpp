@@ -1,8 +1,12 @@
 #include "SpriteComponent.h"
 
 SpriteComponent::SpriteComponent(Actor* actor, int draworder)
+	: Component(actor, draworder)
 {
-	//How would you create a new sprite Component?
+	this->mTexture = nullptr;
+	this->mTextHeight = 0;
+	this->mTextWidth = 0;
+	this->mDrawOrder = draworder;
 }
 
 SpriteComponent::~SpriteComponent()
