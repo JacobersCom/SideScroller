@@ -144,6 +144,7 @@
     <ClCompile Include="project\includes\AnimComponent.cpp" />
     <ClCompile Include="project\includes\BGSpriteComponent.cpp" />
     <ClCompile Include="project\includes\Component.cpp" />
+    <ClCompile Include="project\includes\Componet.cpp" />
     <ClCompile Include="project\includes\InputManager.cpp" />
     <ClCompile Include="project\includes\main.cpp" />
     <ClCompile Include="project\includes\RenderManager.cpp" />

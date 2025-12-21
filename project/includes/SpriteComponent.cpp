@@ -1,5 +1,15 @@
 #include "SpriteComponent.h"
 
+SpriteComponent::SpriteComponent(Actor* actor, int draworder)
+{
+	//How would you create a new sprite Component?
+}
+
+SpriteComponent::~SpriteComponent()
+{
+	//What would happen after the sprite compoenet is destroyed?
+}
+
 void SpriteComponent::Draw(SDL_Renderer* renderer)
 {
 
@@ -16,7 +26,7 @@ void SpriteComponent::Draw(SDL_Renderer* renderer)
 		r.x = static_cast<int>(mOwner->GetPosition().x);
 		r.y = static_cast<int>(mOwner->GetPosition().y);
 
-		//This may not work
+	
 		SDL_RenderTextureRotated(renderer, mTexture, nullptr, &r, ToDegrees(mOwner->GetRotation()), nullptr, SDL_FLIP_NONE);
 	}
 }
