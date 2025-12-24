@@ -1,14 +1,20 @@
 #pragma once
 
-#include "Defines.h"
-
+#include "SDL3/SDL.h"
+#include <iostream>
 
 class InputManager
 {
 public:
+	
 	InputManager();
+	~InputManager();
 
-private:
+
+	void ProcessInput(bool state);
+
+	void ShutDown();
+
 
 	const bool* keyState;
 };

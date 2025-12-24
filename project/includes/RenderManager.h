@@ -1,20 +1,21 @@
 #pragma once
-
-#include "Defines.h"
-#include "WindowManager.h"
+#include "SDL3/SDL.h"
+#include <iostream>
 
 class RenderManager 
 {
 public:
 
-	bool Initialize(SDL_Window* window);
 	RenderManager();
 	~RenderManager();
 
-	//Get the one and only instance
-	static RenderManager& get();
+	bool Initialize(SDL_Window* window);
+	void RenderLoop();
+	void DrawBackGround();
+	void ShutDown();
 
-private:
+	//Get the one and only instance
+	//static RenderManager& get();
 
 	SDL_Renderer* renderer;
 	bool isRunning;
