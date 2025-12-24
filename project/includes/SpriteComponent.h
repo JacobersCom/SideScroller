@@ -3,7 +3,8 @@
 
 #pragma region Class_Includes
 
-#include "D:/dev/sidescroller/project/includes/Component.h"
+#include "Component.h"
+#include "Actor.h"
 #include "RenderManager.h"
 #include "SDL3_image/SDL_image.h"
 #include "Defines.h"
@@ -13,7 +14,6 @@
 #pragma region lib_Includes
 
 #pragma endregion
-
 
 class SpriteComponent : public Component
 {
