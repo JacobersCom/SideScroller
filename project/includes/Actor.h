@@ -6,6 +6,7 @@
 #include <vector>
 #include <memory>
 
+class sripteComponent;
 
 class Actor
 {

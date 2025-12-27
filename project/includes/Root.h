@@ -4,7 +4,6 @@
 #include "RenderManager.h"
 #include "InputManager.h"
 
-#include "Actor.h"
 #include "SpriteComponent.h"
 
 #include <vector>
