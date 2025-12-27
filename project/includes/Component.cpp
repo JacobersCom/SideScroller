@@ -1,6 +1,8 @@
+#include "Actor.h"
 #include "Component.h"
+#include "Actor.h"
 
-Component::Component(Actor* owner, int updateOrder)
+Component::Component(class Actor* owner, int updateOrder)
 {
 	this->mOwner = owner; //The actor owns this component
 	this->mUpdateOrder = updateOrder; //This component will be updated in this order

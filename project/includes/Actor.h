@@ -3,9 +3,11 @@
 #include "Defines.h"
 #include "Root.h"
 
+
 #include <vector>
 #include <memory>
 
+class sripteComponent;
 
 class Actor
 {
