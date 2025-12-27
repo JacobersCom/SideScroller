@@ -3,8 +3,8 @@
 
 #pragma region Class_Includes
 
-#include "Component.h"
 #include "Actor.h"
+#include "Component.h"
 #include "RenderManager.h"
 #include "SDL3_image/SDL_image.h"
 #include "Defines.h"

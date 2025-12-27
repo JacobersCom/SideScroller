@@ -1,3 +1,4 @@
+#include "Actor.h"
 #include "Component.h"
 #include "Actor.h"
 

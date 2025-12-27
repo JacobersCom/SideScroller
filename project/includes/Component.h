@@ -2,8 +2,6 @@
 
 class Actor;
 
-
-
 class Component
 {
 public:
