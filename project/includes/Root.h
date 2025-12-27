@@ -3,7 +3,6 @@
 #include "WindowManager.h"
 #include "RenderManager.h"
 #include "InputManager.h"
-
 #include "SpriteComponent.h"
 
 #include <vector>
